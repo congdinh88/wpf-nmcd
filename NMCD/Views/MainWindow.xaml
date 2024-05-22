@@ -8,7 +8,6 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <Button Width="200" Content="Dinh" Style="{StaticResource BtnApp}"/>
-        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE700;"/>
         <Expander Style="{StaticResource ExpanderApp}" Width="200">
             <Expander.Header>
                 <TextBlock Foreground="{StaticResource LightBrush}" Text="a"/>
@@ -17,5 +16,23 @@
                 <TextBlock>a</TextBlock>
             </StackPanel>
         </Expander>
+        <Expander Style="{StaticResource ExpanderApp}" Width="200">
+            <Expander.Header>
+                <TextBlock Foreground="{StaticResource LightBrush}" Text="a"/>
+            </Expander.Header>
+            <StackPanel>
+                <TextBlock>a</TextBlock>
+            </StackPanel>
+        </Expander>
+
+        <ComboBox Name="comboBox"
+                  IsEditable="True"
+                  StaysOpenOnEdit="True"
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Center"
+                  Width="200"
+                  IsTextSearchEnabled="False"
+                  TextBoxBase.TextChanged="comboBox_TextChanged"
+                  />
     </StackPanel>
 </Window>
