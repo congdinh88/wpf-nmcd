@@ -8,6 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
         <Button Width="200" Content="Dinh" Style="{StaticResource BtnApp}"/>
-        <Expander Header="a">d</Expander>
+        <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE700;"/>
+        <Expander Style="{StaticResource ExpanderApp}" Width="200">
+            <Expander.Header>
+                <TextBlock Foreground="{StaticResource LightBrush}" Text="a"/>
+            </Expander.Header>
+            <StackPanel>
+                <TextBlock>a</TextBlock>
+            </StackPanel>
+        </Expander>
     </StackPanel>
 </Window>
