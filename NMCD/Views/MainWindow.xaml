@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NMCD"
+        xmlns:uc="clr-namespace:NMCD.UserControlApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <Button Width="200" Content="Dinh" Style="{StaticResource BtnApp}"/>
+        <Button Width="200" Content="D" Style="{StaticResource BtnApp}"/>
         <Expander Style="{StaticResource ExpanderApp}" Width="200">
             <Expander.Header>
                 <TextBlock Foreground="{StaticResource LightBrush}" Text="a"/>
@@ -25,14 +26,7 @@
             </StackPanel>
         </Expander>
 
-        <ComboBox Name="comboBox"
-                  IsEditable="True"
-                  StaysOpenOnEdit="True"
-                  VerticalAlignment="Center" 
-                  HorizontalAlignment="Center"
-                  Width="200"
-                  IsTextSearchEnabled="False"
-                  TextBoxBase.TextChanged="comboBox_TextChanged"
-                  />
+        <uc:AutoComplateApp SelectedColumn="Col2"/>
+        <uc:AutoComplateApp SelectedColumn="Col3"/>
     </StackPanel>
 </Window>

@@ -1,0 +1,86 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace NMCD.UserControlApp
+{
+    /// <summary>
+    /// Interaction logic for AutoComplateApp.xaml
+    /// </summary>
+    public class DataSuggesList
+    {
+        public string Col1 { get; set; }
+        public string Col2 { get; set; }
+        public string Col3 { get; set; }
+    }
+    public partial class AutoComplateApp : UserControl
+    {
+        public ObservableCollection<DataSuggesList> dataSuggesList { get; set; }
+        ObservableCollection<DataSuggesList> filteredData { get; set; }
+        public string SelectedColumn
+        {
+            get { return (string)GetValue(SelectedColumnProperty); }
+            set { SetValue(SelectedColumnProperty, value); }
+        }
+        public static readonly DependencyProperty SelectedColumnProperty =
+            DependencyProperty.Register("SelectedColumn", typeof(string), typeof(AutoComplateApp));
+        public AutoComplateApp()
+        {
+            InitializeComponent();
+            dataSuggesList = new ObservableCollection<DataSuggesList> {
+            new DataSuggesList { Col1 = "1", Col2 = "Item1", Col3 = "Description1" },
+            new DataSuggesList { Col1 = "2", Col2 = "Item2", Col3 = "Description2" },
+            new DataSuggesList { Col1 = "3", Col2 = "Item3", Col3 = "Description3" }};
+            dataGrid.ItemsSource = dataSuggesList;
+        }
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string query = textBox.Text.ToLower();
+            if (string.IsNullOrEmpty(query))
+            {
+                popup.IsOpen = false;
+            }
+            else
+            {
+                var selectedProperty = typeof(DataSuggesList).GetProperty(SelectedColumn, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (selectedProperty != null)
+                {
+                    var matches = dataSuggesList.Where(item =>
+                    {
+                        var value = selectedProperty.GetValue(item)?.ToString();
+                        return value != null && value.ToLower().Contains(query);
+                    });
+                    dataGrid.ItemsSource = matches; 
+                    popup.IsOpen = true;
+                }
+            }
+
+        }
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dataGrid.SelectedItem is DataSuggesList selectedItem)
+            {
+                var selectedProperty = selectedItem.GetType().GetProperty(SelectedColumn);
+                if (selectedProperty != null)
+                {
+                    textBox.Text = selectedProperty.GetValue(selectedItem)?.ToString();
+                }
+                popup.IsOpen = false;
+            }
+        }
+    }
+
+}
