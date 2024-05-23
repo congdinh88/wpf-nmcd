@@ -22,9 +22,9 @@
                           Height="auto" Width="auto" 
                           SelectionChanged="DataGrid_SelectionChanged">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Binding="{Binding Col1}" Width="auto"/>
-                        <DataGridTextColumn Binding="{Binding Col2}" Width="auto"/>
-                        <DataGridTextColumn Binding="{Binding Col3}" Width="auto"/>
+                        <DataGridTextColumn Binding="{Binding Column1}" Width="auto"/>
+                        <DataGridTextColumn Binding="{Binding Column2}" Width="auto"/>
+                        <DataGridTextColumn Binding="{Binding Column3}" Width="auto"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </Border>

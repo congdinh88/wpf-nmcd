@@ -10,6 +10,12 @@
     <Compile Update="UserControlApp\AutoComplateApp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControlApp\TextFieldApp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControlApp\TitleBarApp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Styles\Color.xaml">
@@ -19,6 +25,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControlApp\AutoComplateApp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlApp\TextFieldApp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControlApp\TitleBarApp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

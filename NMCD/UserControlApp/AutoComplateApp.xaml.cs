@@ -22,9 +22,9 @@ namespace NMCD.UserControlApp
     /// </summary>
     public class DataSuggesList
     {
-        public string Col1 { get; set; }
-        public string Col2 { get; set; }
-        public string Col3 { get; set; }
+        public string Column1 { get; set; }
+        public string Column2 { get; set; }
+        public string Column3 { get; set; }
     }
     public partial class AutoComplateApp : UserControl
     {
@@ -41,9 +41,9 @@ namespace NMCD.UserControlApp
         {
             InitializeComponent();
             dataSuggesList = new ObservableCollection<DataSuggesList> {
-            new DataSuggesList { Col1 = "1", Col2 = "Item1", Col3 = "Description1" },
-            new DataSuggesList { Col1 = "2", Col2 = "Item2", Col3 = "Description2" },
-            new DataSuggesList { Col1 = "3", Col2 = "Item3", Col3 = "Description3" }};
+            new DataSuggesList { Column1 = "1", Column2 = "Item1", Column3 = "Description1" },
+            new DataSuggesList { Column1 = "2", Column2 = "Item2", Column3 = "Description2" },
+            new DataSuggesList { Column1 = "3", Column2 = "Item3", Column3 = "Description3" }};
             dataGrid.ItemsSource = dataSuggesList;
         }
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
