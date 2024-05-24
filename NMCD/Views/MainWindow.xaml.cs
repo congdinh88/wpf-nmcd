@@ -1,4 +1,5 @@
-﻿using NMCD.UserControlApp;
+﻿using NMCD.Pages;
+using NMCD.UserControlApp;
 using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
@@ -18,41 +19,57 @@ namespace NMCD
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<string> _items;
         public MainWindow()
         {
             InitializeComponent();
-            Mabv();
+            ListPersonnel.ItemsSource = ShowBtnPer();
         }
-        public void Mabv()
-        {
-            TitleBar.abc.Click += abcv;
-        }
-
-        private void abcv(object sender, RoutedEventArgs e)
-        {
-            Main.Background = Brushes.Aqua;
-        }
-
+        
         private void Window_StateChanged(object sender, System.EventArgs e)
         {
-            if (WindowState == WindowState.Maximized)
-            {
-                HeaderBar.Margin = new Thickness(4,4,4,0);
-            }
-            else
-            {
-                HeaderBar.Margin = new Thickness(0);
-            }
+            HeaderBar.Margin= WindowState == WindowState.Maximized? new Thickness(4, 4, 4, 0): new Thickness(0);
         }
 
-        private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        private string[] ShowBtnPer()
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
+            string[] strArray =
             {
-                DragMove();
+                "CBCNV",
+                "Nghỉ phép",
+                "Lịch trực",
+            };
+            return strArray;
+        }
+        private void ListPersonnel_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string s = ListPersonnel.SelectedItem.ToString();
+            switch (s)
+            {
+                case "CBCNV":
+                    MainContent.Navigate(new Personnel());
+                    break;
+                case "Nghỉ phép":
+                    MainContent.Navigate(new Personnel());
+                    break;
+                case "Lịch trực":
+                    MainContent.Navigate(new Personnel());
+                    break;
             }
         }
 
+        private void Expander_Expanded(object sender, RoutedEventArgs e)
+        {
+            Expander expandedExpander = sender as Expander;
+
+            foreach (Expander expander in LeftMenu.Children)
+            {
+                if (expander != expandedExpander && expander.IsExpanded)
+                {
+                    expander.IsExpanded = false;
+                }
+            }
+            LeftMenu.Children.Remove(expandedExpander);
+            LeftMenu.Children.Insert(0, expandedExpander);
+        }
     }
 }

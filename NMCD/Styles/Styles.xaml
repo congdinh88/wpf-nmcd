@@ -52,6 +52,20 @@
         </Style.Triggers>
     </Style>
 
+    <!--Icon style-->
+    <Style x:Key="IconApp" TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+        <Setter Property="Foreground" Value="{StaticResource LightBrush}"/>
+        <Setter Property="Margin" Value="5 0 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    
+    <!--Textblock style-->
+    <Style x:Key="TextBlockApp" TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+        <Setter Property="Foreground" Value="{StaticResource LightBrush}"/>
+        <Setter Property="Margin" Value="5 0 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
 
     <!--Exander style-->
     <Style x:Key="ExpanderApp" TargetType="Expander" >
@@ -99,13 +113,13 @@
                 <Border BorderThickness="0.5" BorderBrush="{DynamicResource LightBrushHover}" Margin="2"/>
                 <TextBlock 
                     x:Name="IconHeader" VerticalAlignment="Center" Margin="3 5 5 5"
-                    FontFamily="Segoe MDL2 Assets" Text="&#xE710;" FontSize="10"
+                    FontFamily="Segoe MDL2 Assets" Text="&#xE948;" FontSize="10"
                     Foreground="{DynamicResource LightBrush}"/>
             </StackPanel>
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsChecked" Value="true">
-                <Setter TargetName="IconHeader" Property="TextBlock.Text" Value="&#xE738;" />
+                <Setter TargetName="IconHeader" Property="TextBlock.Text" Value="&#xE921;" />
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter TargetName="Header" Property="Grid.Background" Value="{StaticResource PrimaryBrushHover}"/>

@@ -38,20 +38,51 @@
                 x:Name="LeftMenu"
                 Grid.Column="0">
                 <Expander
+                    Expanded="Expander_Expanded"
                     Style="{StaticResource ExpanderApp}">
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock 
-                                Margin="5 0 0 0"
-                                VerticalAlignment="Center"
-                                Foreground="{StaticResource LightBrush}" 
-                                FontFamily="Segoe MDL2 Assets" 
+                                Style="{StaticResource IconApp}" 
                                 Text="&#xE716;"/>
                             <TextBlock 
-                                Margin="10 0 0 0"
-                                VerticalAlignment="Center"
-                                Foreground="{StaticResource LightBrush}" 
+                                Style="{StaticResource TextBlockApp}"
                                 Text="Nhân sự"/>
+                        </StackPanel>
+                    </Expander.Header>
+                    <StackPanel>
+                        <ListView 
+                            x:Name="ListPersonnel"
+                            SelectionChanged="ListPersonnel_SelectionChanged">
+                            
+                        </ListView>
+                    </StackPanel>
+                </Expander>
+                <Expander
+                    Expanded="Expander_Expanded"
+                    Style="{StaticResource ExpanderApp}">
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock 
+                                Style="{StaticResource IconApp}" 
+                                Text="&#xEADF;"/>
+                            <TextBlock 
+                                Style="{StaticResource TextBlockApp}"
+                                Text="Giao việc"/>
+                        </StackPanel>
+                    </Expander.Header>
+                </Expander>
+                <Expander
+                    Expanded="Expander_Expanded"
+                    Style="{StaticResource ExpanderApp}">
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock 
+                                Style="{StaticResource IconApp}" 
+                                Text="&#xE8BE;"/>
+                            <TextBlock 
+                                Style="{StaticResource TextBlockApp}"
+                                Text="Công đoàn"/>
                         </StackPanel>
                     </Expander.Header>
                 </Expander>
@@ -60,10 +91,11 @@
                 Grid.Column="1" 
                 HorizontalAlignment="Stretch"
                 Background="{StaticResource LightBrushHover}"/>
-            <StackPanel 
+            <Frame 
                 x:Name="MainContent"
+                NavigationUIVisibility="Hidden"
                 Grid.Column="2">
-            </StackPanel>
+            </Frame>
         </Grid>
         <StackPanel Grid.Row="2">
             <uc:FooterBarApp/>
