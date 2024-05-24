@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Pages\Personnel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControlApp\AutoComplateApp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +24,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Pages\Personnel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\Color.xaml">
       <SubType>Designer</SubType>
     </Page>

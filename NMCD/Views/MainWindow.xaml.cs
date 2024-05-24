@@ -22,6 +22,16 @@ namespace NMCD
         public MainWindow()
         {
             InitializeComponent();
+            Mabv();
+        }
+        public void Mabv()
+        {
+            TitleBar.abc.Click += abcv;
+        }
+
+        private void abcv(object sender, RoutedEventArgs e)
+        {
+            Main.Background = Brushes.Aqua;
         }
 
         private void Window_StateChanged(object sender, System.EventArgs e)
@@ -36,9 +46,13 @@ namespace NMCD
             }
         }
 
-        //private void HeaderBar_MouseDown(object sender, MouseButtonEventArgs e)
-        //{
-        //    DragMove();
-        //}
+        private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
     }
 }

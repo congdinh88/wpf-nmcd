@@ -24,7 +24,6 @@ namespace NMCD.UserControlApp
         {
             InitializeComponent();
         }
-
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -32,7 +31,6 @@ namespace NMCD.UserControlApp
                 Window.GetWindow(this)?.DragMove();
             }
         }
-
         private void MinimizeButton_Click(object sender, RoutedEventArgs e)
         {
             Window.GetWindow(this).WindowState = WindowState.Minimized;
@@ -41,22 +39,13 @@ namespace NMCD.UserControlApp
         private void MaximizeButton_Click(object sender, RoutedEventArgs e)
         {
             var window = Window.GetWindow(this);
+            window.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
             if (window != null)
             {
                 window.WindowState = window.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
-                if(window.WindowState == WindowState.Maximized)
-                {
-                    MaximizeButton.Content = "\xE923";
-                }
-                else
-                {
-                    MaximizeButton.Content = "\xE922";
-                    window.MaxHeight= SystemParameters.FullPrimaryScreenHeight;
-                }
+                MaximizeButton.Content = window.WindowState == WindowState.Maximized ? "\xE923" : "\xE922";
             }
-            
         }
-
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Window.GetWindow(this).Close();
