@@ -6,52 +6,48 @@
              xmlns:local="clr-namespace:NMCD.UserControlApp"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Height="35">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel
-            Grid.Column="2" 
-            Orientation="Horizontal"
-            VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Margin="0 0 20 0">
-                <TextBlock 
-                    VerticalAlignment="Center"
-                    Margin="0 0 5 0"
-                    FontFamily="Segoe MDL2 Assets"  
-                    Text="&#xE77B;"/>
-                <TextBlock 
-                    VerticalAlignment="Center"
-                    Text="Truong Cong Dinh"/>
+    <Grid Height="35" MouseDown="Grid_MouseDown">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Column="2" 
+                Orientation="Horizontal"
+                VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="0 0 20 0">
+                    <TextBlock 
+                        VerticalAlignment="Center"
+                        Margin="0 0 5 0"
+                        FontFamily="Segoe MDL2 Assets"  
+                        Text="&#xE77B;"/>
+                    <TextBlock 
+                        VerticalAlignment="Center"
+                        Text="Truong Cong Dinh"/>
+                </StackPanel>
+                <StackPanel 
+                    Orientation="Horizontal">
+                    <Button x:Name="MinimizeButton"
+                        Click="MinimizeButton_Click"
+                        Style="{StaticResource BtnTitleApp}"
+                        Content="&#xE921;"/>
+                    <Button x:Name="MaximizeButton"
+                        Click="MaximizeButton_Click"
+                        Style="{StaticResource BtnTitleApp}"
+                        Content="&#xE922;"/>
+                    <Button x:Name="CloseButton"
+                        Click="CloseButton_Click"
+                        Style="{StaticResource BtnTitleCloseApp}"
+                        Content="&#xE711;"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel 
-                Margin="0 0 5 0"
-
-                Orientation="Horizontal">
-                <Button 
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Height="30"
-                    Width="40"
-                    FontFamily="Segoe MDL2 Assets"  
-                    Content="&#xE738;"/>
-                <Button 
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Height="30"
-                    Width="40"
-                    FontFamily="Segoe MDL2 Assets"  
-                    Content="&#xE739;"/>
-                <Button 
-                    BorderThickness="0"
-                    Background="Transparent"
-                    Height="30"
-                    Width="40"
-                    FontFamily="Segoe MDL2 Assets"  
-                    Content="&#xE711;"/>
-            </StackPanel>
-        </StackPanel>
+        </Grid>
+        <Border Grid.Row="1" Background="{StaticResource PrimaryBrush}"/>
     </Grid>
 </UserControl>

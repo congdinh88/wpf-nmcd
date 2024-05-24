@@ -6,29 +6,30 @@
         xmlns:local="clr-namespace:NMCD"
         xmlns:uc="clr-namespace:NMCD.UserControlApp"
         mc:Ignorable="d"
+        WindowStyle="None"
+        StateChanged="Window_StateChanged"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Button Width="200" Content="D" Style="{StaticResource BtnApp}"/>
-        <Expander Style="{StaticResource ExpanderApp}" Width="200">
-            <Expander.Header>
-                <TextBlock Foreground="{StaticResource LightBrush}" Text="a"/>
-            </Expander.Header>
-            <StackPanel>
-                <TextBlock>a</TextBlock>
-            </StackPanel>
-        </Expander>
-        <Expander Style="{StaticResource ExpanderApp}" Width="200">
-            <Expander.Header>
-                <TextBlock Foreground="{StaticResource LightBrush}" Text="a"/>
-            </Expander.Header>
-            <StackPanel>
-                <TextBlock>a</TextBlock>
-            </StackPanel>
-        </Expander>
-
-        <uc:AutoComplateApp SelectedColumn="Column2"/>
-        <uc:AutoComplateApp SelectedColumn="Column3"/>
-        <uc:TextFieldApp Width="200"/>
-        <uc:TitleBarApp/>
-    </StackPanel>
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+            CornerRadius="5"
+            GlassFrameThickness="0"
+            CaptionHeight="5" 
+            UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel x:Name="HeaderBar" 
+                    Grid.Row="0" 
+                    VerticalAlignment="Center">
+            <uc:TitleBarApp/>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <uc:FooterBarApp/>
+        </StackPanel>
+        
+    </Grid>
 </Window>

@@ -24,9 +24,21 @@ namespace NMCD
             InitializeComponent();
         }
 
-       public void abca()
+        private void Window_StateChanged(object sender, System.EventArgs e)
         {
-            
+            if (WindowState == WindowState.Maximized)
+            {
+                HeaderBar.Margin = new Thickness(4,4,4,0);
+            }
+            else
+            {
+                HeaderBar.Margin = new Thickness(0);
+            }
         }
+
+        //private void HeaderBar_MouseDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    DragMove();
+        //}
     }
 }

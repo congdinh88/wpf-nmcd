@@ -6,7 +6,7 @@
     <Color x:Key="DangerColor">#dc3545</Color> <!--Color Danger #dc3545 -rgba(220,53,69,255) -->
     <Color x:Key="WarningyColor">#ffc107</Color> <!--Color Warning #ffc107 -rgba(255,193,7,255)-->
     <Color x:Key="InfoColor">#0dcaf0</Color> <!--Color Info #0dcaf0 -rgba(13,202,240,255) -->
-    <Color x:Key="LightColor">#ffffff</Color> <!--Color Light #ffffff -rgba(255,255,255,255) -->
+    <Color x:Key="LightColor">#fff</Color> <!--Color Light #ffffff -rgba(255,255,255,255) -->
     <Color x:Key="DarkColor">#212529</Color> <!--Color Dark #212529 -rgba(33,37,41,255) -->
     <Color x:Key="LinkColor">#0d9efe</Color> <!--Color Link #0d9efe -rgba(13,158,254,255) -->
     
