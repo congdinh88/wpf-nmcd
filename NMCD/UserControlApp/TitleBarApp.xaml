@@ -6,7 +6,10 @@
              xmlns:local="clr-namespace:NMCD.UserControlApp"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Height="36" MouseDown="Grid_MouseDown">
+    <Grid 
+        Height="36" 
+        MouseDown="Grid_MouseDown" 
+        Background="{StaticResource FrameBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="1"/>
@@ -18,7 +21,70 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <StackPanel x:Name="MenuBar" Grid.Column="0">
-                <Button x:Name="abc" Content="test"/>
+                <ToolBarTray >
+                    <ToolBar Height="auto">
+                        <Menu ToolBar.OverflowMode="AsNeeded">
+                            <MenuItem Header="Tùy chọn" >
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="Thêm mới"></MenuItem>
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="Sửa"></MenuItem>
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="Lưu"></MenuItem>
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="Xóa"></MenuItem>
+                                <Separator Margin="40 0 0 0"/>
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="Tìm kiếm"></MenuItem>
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="In"></MenuItem>
+                                <Separator Margin="40 0 0 0"/>
+                                <MenuItem 
+                                Padding="5 0 5 0"
+                                Header="Tải lại"></MenuItem>
+                                <Separator Margin="40 0 0 0"/>
+                                <MenuItem
+                                Padding="5 0 5 0"
+                                Command="Cut"
+                                Header="_Cut"
+                                />
+                                <MenuItem
+                                Padding="5 0 5 0"
+                                Command="Copy"
+                                Header="_Copy"
+                                />
+                                <MenuItem
+                                Padding="5 0 5 0"
+                                Command="Paste"
+                                Header="_Paste"
+                                />
+                            </MenuItem>
+                        </Menu>
+                        <StackPanel Orientation="Horizontal" ToolBar.OverflowMode="AsNeeded">
+                            <Button Width="40" ToolBar.OverflowMode="AsNeeded">a
+                            </Button>
+                            <Button Width="40"  ToolBar.OverflowMode="AsNeeded">b
+                            </Button>
+                            <Button Width="40"  ToolBar.OverflowMode="AsNeeded">c
+                            </Button>
+                            <Button Width="40"  ToolBar.OverflowMode="AsNeeded">b
+                            </Button>
+                            <Button Width="40"  ToolBar.OverflowMode="AsNeeded">a
+                            </Button>
+                            <Button Width="40"  ToolBar.OverflowMode="AsNeeded">f
+                            </Button>
+                            <Button Width="40"  ToolBar.OverflowMode="AsNeeded">b
+                            </Button>
+                        </StackPanel>
+
+                    </ToolBar>
+                </ToolBarTray>
             </StackPanel>
             <StackPanel x:Name="MainTileBar" Grid.Column="1">
                 

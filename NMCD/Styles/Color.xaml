@@ -9,6 +9,8 @@
     <Color x:Key="LightColor">#fff</Color> <!--Color Light #ffffff -rgba(255,255,255,255) -->
     <Color x:Key="DarkColor">#212529</Color> <!--Color Dark #212529 -rgba(33,37,41,255) -->
     <Color x:Key="LinkColor">#0d9efe</Color> <!--Color Link #0d9efe -rgba(13,158,254,255) -->
+    <Color x:Key="BackgroundColor">#e2f1ff</Color><!--Color background #e2f1ff -rgba(226,241,255,255)-->
+    <Color x:Key="FrameColor">#eeeef2</Color><!--Color frame ##eeeef2 -rgba(238,238,242,255)-->
     
     <Color x:Key="PrimaryColorHover">#175abe</Color> <!--Color Primary hover #0d6efd -rgba(13,110,253,255) -->
     <Color x:Key="SecondaryColorHover">#585e63</Color> <!--Color Secondary hover #6c757d -rgba(108,117,125,255) -->
@@ -29,6 +31,8 @@
     <SolidColorBrush x:Key="LightBrush" Color="{StaticResource LightColor}" />
     <SolidColorBrush x:Key="DarkBrush" Color="{StaticResource DarkColor}" />
     <SolidColorBrush x:Key="LinkBrush" Color="{StaticResource LinkColor}" />
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource BackgroundColor}" />
+    <SolidColorBrush x:Key="FrameBrush" Color="{StaticResource FrameColor}" />
 
     <SolidColorBrush x:Key="PrimaryBrushHover" Color="{StaticResource PrimaryColorHover}" />
     <SolidColorBrush x:Key="SecondaryyBrushHover" Color="{StaticResource SecondaryColorHover}" />
