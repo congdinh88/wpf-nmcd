@@ -27,10 +27,22 @@
     <Page Update="Pages\Personnel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\Color.xaml">
+    <Page Update="Themes\StButton.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\Styles.xaml">
+    <Page Update="Themes\StColor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\StExpander.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\StIcon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\StTextblock.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Themes.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControlApp\AutoComplateApp.xaml">

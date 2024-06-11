@@ -9,6 +9,18 @@
       Title="Personnel">
 
     <Grid>
-        <TextBlock Text="pesonnel"/>
+        <DataGrid x:Name="PersonnelGrid" 
+            IsReadOnly="True" 
+            AutoGenerateColumns="False"
+            SelectionUnit="Cell"
+            HorizontalAlignment="Left"
+            >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã NV" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Họ và tên" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Ngày sinh" Binding="{Binding DateOfBirth}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

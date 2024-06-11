@@ -107,15 +107,15 @@
                     Orientation="Horizontal">
                     <Button x:Name="MinimizeButton"
                         Click="MinimizeButton_Click"
-                        Style="{StaticResource BtnTitleApp}"
+                        Style="{StaticResource StButtonTitlebar}"
                         Content="&#xE921;"/>
                     <Button x:Name="MaximizeButton"
                         Click="MaximizeButton_Click"
-                        Style="{StaticResource BtnTitleApp}"
+                        Style="{StaticResource StButtonTitlebar}"
                         Content="&#xE922;"/>
                     <Button x:Name="CloseButton"
                         Click="CloseButton_Click"
-                        Style="{StaticResource BtnTitleCloseApp}"
+                        Style="{StaticResource StButtonTitlebarClose}"
                         Content="&#xE8BB;"/>
                 </StackPanel>
             </StackPanel>

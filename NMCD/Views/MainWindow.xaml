@@ -39,14 +39,14 @@
                 Grid.Column="0">
                 <Expander
                     Expanded="Expander_Expanded"
-                    Style="{StaticResource ExpanderApp}">
+                    Style="{StaticResource StExpander}">
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock 
-                                Style="{StaticResource IconApp}" 
+                                Style="{StaticResource StIcon}" 
                                 Text="&#xE716;"/>
                             <TextBlock 
-                                Style="{StaticResource TextBlockApp}"
+                                Style="{StaticResource StTextBlock}"
                                 Text="Nhân sự"/>
                         </StackPanel>
                     </Expander.Header>
@@ -60,28 +60,28 @@
                 </Expander>
                 <Expander
                     Expanded="Expander_Expanded"
-                    Style="{StaticResource ExpanderApp}">
+                    Style="{StaticResource StExpander}">
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock 
-                                Style="{StaticResource IconApp}" 
+                                Style="{StaticResource StIcon}" 
                                 Text="&#xEADF;"/>
                             <TextBlock 
-                                Style="{StaticResource TextBlockApp}"
+                                Style="{StaticResource StTextBlock}"
                                 Text="Giao việc"/>
                         </StackPanel>
                     </Expander.Header>
                 </Expander>
                 <Expander
                     Expanded="Expander_Expanded"
-                    Style="{StaticResource ExpanderApp}">
+                    Style="{StaticResource StExpander}">
                     <Expander.Header>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock 
-                                Style="{StaticResource IconApp}" 
+                                Style="{StaticResource StIcon}" 
                                 Text="&#xE8BE;"/>
                             <TextBlock 
-                                Style="{StaticResource TextBlockApp}"
+                                Style="{StaticResource StTextBlock}"
                                 Text="Công đoàn"/>
                         </StackPanel>
                     </Expander.Header>

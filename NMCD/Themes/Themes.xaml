@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StColor.xaml"/>
+        <ResourceDictionary Source="StExpander.xaml"/>
+        <ResourceDictionary Source="StButton.xaml"/>
+        <ResourceDictionary Source="StIcon.xaml"/>
+        <ResourceDictionary Source="StTextblock.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
